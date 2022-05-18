@@ -1,69 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Atma&family=Kodchasan&display=swap');
+
+:root {
+    /* change the values below to your colors from your palette */
+    --primary-color: #F00C18   ;
+    --secondary-color: #19A5FF ;
+    --accent1-color: #FE4F19;
+    --accent2-color: #13D1FF;
+    --primary-alt-color: white;
+    --secondary-alt-color: black;
+  
+    /* change the values below to your chosen font(s) */
+    --heading-font: Atma, "Brush Script MT", Georgia;
+    --paragraph-font: Kodchasan, Helvetica, sans-serif;
+  
+    /* these colors below should be chosen from among your palette colors above */
+    --headline-color-on-white: black;  /* headlines on a white background */ 
+    --headline-color-on-color: white; /* headlines on a colored background */   
+    --paragraph-color-on-white: black; /* paragraph text on a white background */ 
+    --paragraph-color-on-color: white; /* paragraph text on a colored background */ 
+    --paragraph-background-color: black  ;
+    --nav-link-color: white;
+    --nav-background-color: #FE4F19;
+    --nav-hover-link-color: black;
+    --nav-hover-background-color: #F00C18;
+}
+  
+a{
+    font-family: var(--heading-font);
+}
 body{
-    background-color: white;
-}
-header{
-    background-color: #FE4F19;
-}
-main section{
-    text-align: center;
-}
-nav a{
-    text-align: center;
-    color: white;
-    text-decoration: none;
-}
-nav a:hover{
-    background-color:#F00C18;
-    color: black;
-}
-h4{
-    color: black;
+    background-color: var(--primary-alt-color);
+    font-size: 22px;
+    margin: 0;
+    padding: 0;
 }
 footer{
-    background-color: #13D1FF;
+    background-color: var(--accent2-color);
+    padding: 25px 50px;
+    margin-top: 200px;
 }
 footer h3{
-    color: white;
+    color: var(--primary-alt-color);
 }
 footer a{
-    color: black;
+    color: var(--secondary-alt-color);
     text-decoration: none;
 }
 footer a:hover{
-    color: white;
+    color: var(--primary-alt-color);
 }
 footer h3 a:hover{
     text-decoration: underline;
 }
-.logo{
-    width: 80px;
+footer .social img{
+    padding-top: 15px;
 }
-.icon{
-    width: 80px;
+h1, h2, h3, h4 {
+    font-family: var(--heading-font);
 }
-.book, .join{
-    background-color: #F00C18;
-    color: white;
+h2{
+    margin: 0;
+}
+h4{
+    color: var(--secondary-alt-color);
+}
+header{
+    background-color: var(--accent1-color);
+}
+main section{
+    text-align: center;
+}
+main section img{
+    box-sizing: border-box;
+}
+nav a{
+    text-align: center;
+    color: var(--primary-alt-color);
     text-decoration: none;
+    padding: 35px;
+}
+nav a:hover{
+    background-color:var(--primary-color);
+    color: var(--secondary-alt-color);
+}
+p{
+    font-family: var(--paragraph-font);
+}
+
+.book, .join{
+    background-color: var(--secondary-color);
+    color: var(--primary-alt-color);
+    text-decoration: none;
+    font-size: 18px;
+    padding: 15px 30px;
+    margin-top: 50px;
+    border-radius: 5px;
 }
 .book:hover, .join:hover{
-    background-color: #13D1FF;
-    color: black;
-}
-.msg{
-    background-color: #FE4F19;
-}
-.msg h2{
-    color: white;
-}
-.msg p{
-    color: white;
-}
-.home-title{
-    color: white;
+    background-color: var(--accent2-color);
+    color: var(--secondary-alt-color);
 }
 .button-box{
     text-align: center;
+}
+.card-img{
+    border: 10px solid var(--headline-color-on-white);
+}
+.home-title{
+    font-size: 2em;
+    margin-top: 10px;
+    color: var(--primary-alt-color);
+}
+.icon{
+    width: 80px;
+    padding-top: 10px;
+}
+.logo{
+    width: 80px;
+}
+.msg{
+    background-color: var(--primary-color);
+    padding: 35px;
+}
+.msg h2{
+    color: var(--primary-alt-color);
+    line-height: 1.5em;
+}
+.msg p{
+    color: var(--primary-alt-color);
+    font-size: 0.8em;
+    padding-bottom: 15px;
+}
+.rivers-card, .camping-card, .rapids-card{
+    margin: 200px 0;
+}
+
+#background{
+    height: 725px;
+    background-color: var(--accent2-color);
 }
 #content{
     max-width: 1600px;
@@ -75,9 +149,6 @@ footer h3 a:hover{
 #hero-msg h1, #hero-msg h4{
     text-align: center;
 }
-#background{
-    height: 725px;
-    background-color: #13D1FF;
+#logo_link{
+    padding-top: 5px;
 }
-
-

@@ -1,0 +1,21 @@
+body{
+    margin: 0;
+    background-color: gray;
+}
+header{
+    margin: 0;
+}
+.banner-top{
+    width: 100%;
+    margin: 0;
+}
+.images-section{
+    text-align: center;
+    background-color: gray;
+}
+.images-oval{
+    border-radius: 50%;
+    width: 20%;
+    border: 10px solid #464646;
+    margin: 25px;
+}
