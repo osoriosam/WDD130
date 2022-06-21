@@ -10,6 +10,9 @@ Fonts are separated by a | */
   --secondary-color: #19A5FF ;
   --accent1-color: #FE4F19;
   --accent2-color: #13D1FF;
+  --primary-alt-color: white;
+  --secondary-alt-color: black;
+  --shadow-color: #6f7364;
 
   /* change the values below to your chosen font(s) */
   --heading-font: "Atma";
@@ -31,14 +34,14 @@ Fonts are separated by a | */
 /*  Look around below...but DON'T CHANGE ANYTHING! */
 
 body {
-  max-width: 960px;
-  margin: 0 auto;
+/*  max-width: 960px;*/
+  margin: 0;
   padding: 4em;
   font-size: 18px;
   text-align: center;
 }
 img {
-  display: block;
+/*  display: block;*/
   margin: 0 auto;
   max-width: 300px;
 }
@@ -54,13 +57,14 @@ hr {
   margin: 35px 0;
   background: var(--accent1-color);
 }
-header {
+.header-2 {
   padding: 1em;
   text-align: center;
   color: var(--paragraph-color-on-color);
   background-color: var(--paragraph-background-color);
+  grid-column: 1/3;
 }
-header > h1, header > h2 {
+.header-2 > h1, .header-2 > h2 {
   color: var(--headline-color-on-color);
 }
 p {
@@ -97,17 +101,86 @@ p.colored {
   background-color: var(--paragraph-background-color);
   color: var(--paragraph-color-on-color);
 }
-nav {
+/*nav {
   background-color: var(--nav-background-color);
   line-height: 3em;
   text-align: center;
   font-size: 1.2em;
-}
-nav  {
+}*/
+/*nav  {
   list-style-type: none;
   display: flex;
+}*/
+nav{
+  background-color: var(--nav-background-color);
+  display: flex;
+  justify-content: space-around;
 }
-nav a {
+nav a{
+  text-align: center;
+  color: var(--primary-alt-color);
+  text-decoration: none;
+  padding: 35px;
+}
+nav a:hover{
+  background-color:var(--primary-color);
+  color: var(--secondary-alt-color);
+}
+a{
+  font-family: var(--heading-font);
+}
+header{
+  background-color: var(--accent1-color);
+  display: grid;
+  grid-template-columns: 150px auto;
+}
+.logo{
+    width: 80px;
+}
+#logo_link{
+  padding-top: 5px;
+  justify-self: center;
+  align-self: center;
+}
+footer{
+  background-color: var(--accent2-color);
+  padding: 25px 50px;
+  margin-top: 200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+footer a{
+  color: var(--secondary-alt-color);
+  text-decoration: none;
+}
+footer a:hover{
+  color: var(--primary-alt-color);
+}
+footer h3{
+  color: var(--primary-alt-color);
+}
+footer h3 a:hover{
+  text-decoration: underline;
+}
+footer .social img{
+  padding-top: 15px;
+}
+#content{
+  max-width: 1600px;
+  margin: 0 auto;
+}
+body{
+  background-color: var(--primary-alt-color);
+  font-size: 22px;
+  margin: 0;
+  padding: 0;
+}
+#nav-backgruound{
+  background-color: var(--nav-background-color);
+  width: 100%;
+}
+/*nav a {
   padding:1em;
   min-width: 120px;
   text-decoration: none;
@@ -119,7 +192,7 @@ nav a:link, nav a:visited {
 nav a:hover {
   color: var(--nav-hover-link-color);
   background-color: var(--nav-hover-background-color);
-}
+}*/
 .sitemap {
   display: grid;
   justify-content: center;
