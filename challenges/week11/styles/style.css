@@ -1,0 +1,36 @@
+body{
+    margin: auto;
+    width: 1200px;
+}
+.content{
+    text-align: center;
+}
+section{
+    width: 50%;
+    border: 1px solid;
+}
+
+.block1{
+    margin-right: auto;
+}
+.block2{
+    margin: auto;
+}
+.block3{
+    margin-left: auto ;
+}
+.block4{
+    margin: auto ;
+}
+.line1{
+    text-align: left;
+}
+.line2{
+    text-align: center;
+}
+.line3{
+    text-align: right;
+}
+.line4{
+    text-align: right;
+}
