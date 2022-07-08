@@ -27,7 +27,7 @@ Fonts are separated by a | */
   --nav-hover-link-color: #DF8381;
   --nav-hover-background-color: #001427;
 }
-  
+
 a{
     font-family: var(--heading-font);
 }
@@ -132,6 +132,45 @@ p{
     font-size: 0.8em;
     padding-bottom: 15px;
 }
+/* The navigation bar */
+.navbar {
+    overflow: hidden;
+    background-color:  var(--accent1-color);
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    max-width: 1600px;
+    justify-content: space-around;
+    text-align: center;
+    color: var(--primary-alt-color);
+    text-decoration: none;
+}
+  
+  /* Links inside the navbar */
+.navbar a {
+    float: left;
+    text-decoration: none;
+    text-align: center;
+    color: var(--primary-alt-color);
+    text-decoration: none;
+    padding: 0px 35px;
+}
+.navbar nav{
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--nav-background-color);
+    color: var(--nav-link-color);
+}
+.navbar nav a{
+    text-align: center;
+    color: var(--primary-alt-color);
+    text-decoration: none;
+    padding: 35px;
+}
+.navbar nav a:hover{
+    background-color:var(--primary-color);
+    color: var(--secondary-alt-color);
+}
 
 /*  Web Site Ids    */ 
 
@@ -167,7 +206,7 @@ p{
     margin: 0 auto;
 }
 #logo_link{
-    padding-top: 5px;
+    padding-top: 10px;
     justify-self: center;
     align-self: center;
 }
