@@ -197,6 +197,9 @@ p{
 #banner-img{
     width: 100%;
 }
+#banner_img{
+    width: 100%;
+}
 #banner-msg{
     grid-column: 2/3;
     grid-row: 2/4;
