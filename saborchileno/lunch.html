@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles/styles.css">
     <title>Restaurant | Sabor Chileno | Lunch </title>
 </head>
-<body>
+<body onload="banner()">
     <div id="content">
         <header>
             <div class="navbar">
@@ -22,7 +22,7 @@
                 </nav>
             </div>
         </header>
-        <div id="banner" onload="banner()">
+        <div id="banner">
             <div id="banner-box">
                 <img id="banner_img" src="" alt="Our restaurant">
             </div>
@@ -96,23 +96,25 @@
         </footer>
     </div>
 <script>
+    //array with images src
     ads = new Array(3);
-    ads[0] = "C:/Users/hbs/OneDrive/Documents/Grizzly/Bachelor Degree/WDD130 (Web Funamentals)/wdd130/saborchileno/images/lunch/rsz_lunch.png";
-    ads[1] = "C:/Users/hbs/OneDrive/Documents/Grizzly/Bachelor Degree/WDD130 (Web Funamentals)/wdd130/saborchileno/images/lunch/rsz_empanada.jpg";
-    ads[2] = "C:/Users/hbs/OneDrive/Documents/Grizzly/Bachelor Degree/WDD130 (Web Funamentals)/wdd130/saborchileno/images/lunch/rsz_completo.jpg";
-    ads[3] = "C:/Users/hbs/OneDrive/Documents/Grizzly/Bachelor Degree/WDD130 (Web Funamentals)/wdd130/saborchileno/images/lunch/rsz_chorrillana.jpg";
+    ads[0] = "images/lunch/rsz_lunch.png";
+    ads[1] = "images/lunch/rsz_empanada.jpg";
+    ads[2] = "images/lunch/rsz_completo.jpg";
+    ads[3] = "images/lunch/rsz_chorrillana.jpg";
 
-    //variable para llevar la cuenta de las imagenes
+    //images counter variable
     var longuitudArray = ads.length;
     var contador = 0
 
-    // Cojemos un numero aleatorio
+    //random number
     contador = Math.floor((Math.random() * longuitudArray))
 
-    // Cambia la imagen cada segundo en este ejemplo
-    var tiempo = 1// En segundos
+    //timer to change images
+    var tiempo = 4// in secs
     var timer = tiempo * 1000;
 
+    //function to change src
     function banner() {
         contador++;
         contador = contador % longuitudArray
