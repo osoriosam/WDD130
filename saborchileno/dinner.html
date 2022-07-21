@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles/styles.css">
     <title>Restaurant | Sabor Chileno | Dinner</title>
 </head>
-<body>
+<body onload="banner()">
     <div id="content">
         <header>
             <div class="navbar">
@@ -24,7 +24,7 @@
         </header>
         <div id="banner">
             <div id="banner-box">
-                <img id="banner-img" src="images/dinner/rsz_dinner.png" alt="Our restaurant">
+                <img id="banner_img" src="images/dinner/rsz_dinner.png" alt="Our restaurant">
             </div>
             <div id="banner-msg">
                 <h1>Dinner</h1>
@@ -47,29 +47,30 @@
             <p id="food-msg-1">
                 <b>"Cazuela de vacuno"</b><br>
                 The traditional Chilean "cazuela" consists of a delicious beef broth with veal, 
-                corn chunks, boiled potatoes, boiled vegetables, served in a 
-                clay dish to preserve the heat and flavor of this exquisite 
-                and typical Chilean dish.
+                corn chunks, boiled potatoes, boiled vegetables, served in a <span id="dots[1]">...</span>
+                <span id="more1"> dish to preserve the heat and flavor of this exquisite 
+                and typical Chilean dish.</span>
                 <br>
-                <a href="#">Read more...</a>
+                <button onclick="myFunction(1)" id="myBtn1">Read more...</button>
             </p>
             <img id="food-img-2" src="images/dinner/pastel_de_choclo.jpg" alt="Pastel de choclo">
             <p id="food-msg-2">
                 <b>"Pastel de choclo"</b><br>
-                The tasty "pastel de choclo" consists of a base of minced meat, boiled onion, biled egg, black olives covered 
-                with a cooked corn paste and baked to give it the traditional golden color, served in a clay dish 
-                to preserve the heat and flavor of this exquisite and typical Chilean dish. 
+                The tasty "pastel de choclo" consists of a base of minced meat, boiled onion, 
+                biled egg, black olives covered with a cooked corn paste and baked to give it <span id="dots[2]">...</span>
+                <span id="more2">the traditional golden color, served in a clay dish 
+                to preserve the heat and flavor of this exquisite and typical Chilean dish.</span> 
                 <br>
-                <a href="#">Read more...</a>
+                <button onclick="myFunction(2)" id="myBtn2">Read more</button>
             </p>
             <img id="food-img-3" src="images/dinner/chuleta.png" alt="Chuleta vetada">
             <p id="food-msg-3">
                 <b>"Chuleta vetada"</b><br>
-                The irresistible "chuleta vetada" consists of a juicy roasted 
-                vetada pork chop accompanied by potatoes with mayonnaise and fresh 
-                vegetables and Chilean pebre.
+                The irresistible "chuleta vetada" consists of a juicy roasted <span id="dots[3]">...</span>
+                <span id="more3">vetada pork chop accompanied by potatoes with mayonnaise and fresh 
+                vegetables and Chilean pebre.</span>
                 <br>
-                <a href="#">Read more...</a>
+                <button onclick="myFunction(3)" id="myBtn3">Read more</button>
             </p>
             <div id="alternatives-title">
                 <h2>More dinner alternatives</h2>
@@ -97,5 +98,47 @@
             </div>
         </footer>
         </div>
-</body>
+        <script>
+            //array with images src
+            ads = new Array(3);
+            ads[0] = "images/dinner/pastel_de_choclo_banner.jpg";
+            ads[1] = "images/dinner/chuleta_banner.png";
+            ads[2] = "images/dinner/cazuela_banner.jpg";
+            ads[3] = "images/dinner/rsz_dinner.png";
+        
+            //images counter variable
+            var longuitudArray = ads.length;
+            var contador = 0
+        
+            //random number
+            contador = Math.floor((Math.random() * longuitudArray))
+        
+            //timer to change images
+            var tiempo = 4// in secs
+            var timer = tiempo * 1000;
+        
+            //function to change src
+            function banner() {
+                contador++;
+                contador = contador % longuitudArray
+                document.getElementById("banner_img").src = ads[contador];
+                setTimeout("banner()", timer);
+            }
+            function myFunction(number_id) {
+                var dots = document.getElementById("dots[" + number_id + "]");
+                var moreText = document.getElementById("more" + number_id);
+                var btnText = document.getElementById("myBtn" + number_id);
+
+                if (dots.style.display === "none") {
+                    dots.style.display = "inline";
+                    btnText.innerHTML = "Read more...";
+                    moreText.style.display = "none";
+                } else {
+                    dots.style.display = "none";
+                    btnText.innerHTML = "Read less...";
+                    moreText.style.display = "inline";
+                }
+            }
+        </script>
+        </body>
 </html>

@@ -340,8 +340,12 @@ p{
 #food-alt-5{
     grid-column: 10/11;
 }
-
-
+#more1, #more2, #more3 {
+    display: none;
+}
+#myBtn1, #myBtn2, #myBtn3{
+    color: var(--secondary-color);
+}
 
 /* Specific Site plan*/
 .header-section {
